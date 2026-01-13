@@ -12,8 +12,13 @@ public class RubricaTelefonica {
     public void removeSelectedContact(String nome) {
         contatti.remove(nome);
     }
-    public void searchContact(String nome) {
+    public void searchContactByName(String nome) {
         if(contatti.containsKey(nome)) System.out.println("Risultato: " + contatti.get(nome));
+        else System.out.println("Contatto non trovato");
+    }
+    public void SearchContactByValue(long numero) {
+        if(contatti.containsValue(numero)) System.out.println("Risultato: " + contatti.values(numero));
+        else System.out.println("Contatto non trovato");
     }
 }
 
