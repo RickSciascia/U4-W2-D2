@@ -14,6 +14,12 @@ public class Es2 {
         System.out.println("2) es.2");
         System.out.println("Array Prima di applicare metodo getListaReverse :" + arrayIniziale);
         System.out.println("Applico getListaReverse: " + getListaReverse(arrayIniziale));
+        System.out.println("3) es.2");
+        System.out.println("Array Iniziale:" + arrayIniziale);
+        System.out.println("invoco getPariDispari con true");
+        getPariDispari(arrayIniziale, true);
+        System.out.println("invoco getPariDispari con false");
+        getPariDispari(arrayIniziale, false);
     }
     public static ArrayList<Integer> getListaRandom(int numero) {
         Random r = new Random();
@@ -21,7 +27,7 @@ public class Es2 {
         for (int i =0 ; i < numero; i++) {
             listaRandom.add(r.nextInt(0,100));
         }
-         Collections.sort(listaRandom);
+        Collections.sort(listaRandom);
         return listaRandom;
     }
     public static ArrayList<Integer> getListaReverse(ArrayList<Integer> arrayInteri) {
@@ -30,5 +36,16 @@ public class Es2 {
         arraySummed.addAll(arrayInteri);
         arraySummed.addAll(arrayReversed);
         return arraySummed;
+    }
+    public static void getPariDispari (ArrayList<Integer> arrayInteri, boolean b) {
+        if(b) {
+            for(int i = 0; i< arrayInteri.size();i+=2) {
+                System.out.println("Posizione: " + i + " valore: " + arrayInteri.get(i));
+            }}
+        else {
+                for (int i = 1; i< arrayInteri.size();i+=2) {
+                    System.out.println("Posizione: " + i + " valore: " + arrayInteri.get(i));
+                }
+            }
     }
 }
