@@ -7,6 +7,10 @@ public class Main {
         rubrica1.addNewContact("Giovanni Storti",3314567891L);
         rubrica1.addNewContact("Giacomo Poretti",3314567892L);
         rubrica1.searchContactByName("Aldo");
-//        rubrica1.searchContactByValue();
+        rubrica1.searchContactByName("Aldo Baglio");
+        rubrica1.searchContactByValue(3314567891L);
+        rubrica1.searchContactByValue(3314567897L);
+        System.out.println("uso metodo printDirectory");
+        rubrica1.printDirectory();
     }
 }

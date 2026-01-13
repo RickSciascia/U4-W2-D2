@@ -1,6 +1,7 @@
 package Es3;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class RubricaTelefonica {
 //    attributi
@@ -16,9 +17,19 @@ public class RubricaTelefonica {
         if(contatti.containsKey(nome)) System.out.println("Risultato: " + contatti.get(nome));
         else System.out.println("Contatto non trovato");
     }
-    public void SearchContactByValue(long numero) {
-        if(contatti.containsValue(numero)) System.out.println("Risultato: " + contatti.values(numero));
-        else System.out.println("Contatto non trovato");
+    public void searchContactByValue(long numero) {
+        Set<String> nomi = contatti.keySet();
+        for(String nome: nomi){
+            if(numero == (contatti.get(nome))) {
+                System.out.println("Contatto trovato: " + nome);
+            }
+        }
+    }
+    public void printDirectory(){
+        Set<String> nomi = contatti.keySet();
+        for (String nome: nomi) {
+            System.out.println(nome + " " + contatti.get(nome));
+        }
     }
 }
 
